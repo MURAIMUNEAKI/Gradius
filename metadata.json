@@ -1,0 +1,8 @@
+{
+  "name": "Remix GRADIUS COSMIC FORCE",
+  "description": "Retro 8-bit horizontal space shooter with power-up gauge, shadow clone options, bullet patterns, and massive dreadnought boss.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

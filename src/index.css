@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Press Start 2P', monospace, system-ui;
+    background-color: #030712;
+    color: #f3f4f6;
+    user-select: none;
+    touch-action: none;
+  }
+}
+
+/* CRT Screen Effect */
+.crt-effect::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.35) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.03));
+  z-index: 20;
+  background-size: 100% 3px, 6px 100%;
+  pointer-events: none;
+  opacity: 0.85;
+}
+
+.crt-effect::after {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  background: radial-gradient(circle at center, transparent 65%, rgba(0, 0, 0, 0.6) 100%);
+  pointer-events: none;
+  z-index: 21;
+}
+
+/* Retro arcade glow effects */
+.arcade-glow-orange {
+  box-shadow: 0 0 12px rgba(249, 115, 22, 0.6), inset 0 0 8px rgba(249, 115, 22, 0.3);
+}
+
+.arcade-glow-cyan {
+  box-shadow: 0 0 12px rgba(6, 182, 212, 0.6), inset 0 0 8px rgba(6, 182, 212, 0.3);
+}
+
+.arcade-glow-red {
+  box-shadow: 0 0 14px rgba(239, 68, 68, 0.7);
+}
+
+.pixel-art {
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -webkit-crisp-edges;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
+@keyframes warningBlink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.2; }
+}
+
+.animate-warning {
+  animation: warningBlink 0.5s infinite;
+}
+
+@keyframes cursorBlink {
+  0%, 100% { background-color: #f97316; color: #000; }
+  50% { background-color: #fbbf24; color: #000; }
+}
+
+.animate-cursor-active {
+  animation: cursorBlink 0.35s infinite;
+}
